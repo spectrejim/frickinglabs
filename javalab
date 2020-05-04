@@ -1,0 +1,38 @@
+//Scott, the idiot who is late
+//random numbers
+function rndm(max) {
+  return Math.floor(Math.random()*Math.floor(max));
+}
+function add(a,b) {
+    return a+b;
+}
+function pro(a,b) {
+    return a*b;
+}
+//fifty!
+function lessThen50(a) {
+    return a<50;
+}
+//five
+//push
+var randoms=[];
+var i;
+for (i=0;i<5;i++) {
+    randoms.push(rndm(100));
+}
+//stringify
+console.log("Array:["+randoms+"]")
+console.log("JSON:"+JSON.stringify(randoms));
+randoms.sort((a,b)=>{return a-b});
+console.log("Sorted:["+randoms+"]")
+//sum
+const sum=randoms.reduce(add,0);
+console.log("Sum:"+sum);
+//product
+product=randoms.filter(lessThen50);
+product=product.reduce(pro);
+if (product==0)
+  product=1
+console.log("Product:"+product);
+//change to one
+//hope this works
